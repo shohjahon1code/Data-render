@@ -47,7 +47,6 @@ const renderSelectOpt = (data) => {
 // filter selectOptions
 const selectItems = () => {
   const selectValue = elSelect.value;
-
   const selectFilter = data.filter(
     (item) => item.postId == selectValue || selectValue == "all"
   );

@@ -1,11 +1,20 @@
-function identifyNegativeNums(array) {
-  let arr = [];
-  array.forEach((item) => {
-    if (item < 0) {
-      arr.push(item);
+// 1-masala
+
+function sortArray(array) {
+  let positive = 0;
+  let negative = 0;
+
+  array.forEach((arr) => {
+    if (arr > 0) {
+      positive++
+    } else {
+      negative += arr
     }
   });
-  return arr;
+  // const reducedPos = positive.reduce((acc, cur) => acc + cur);
+  // const reducedNeg = negative.reduce((acc, cur) => acc + cur);
+
+  return [positive, negative];
 }
 
-console.log(identifyNegativeNums([1, 3, -4, 6, -8, -9, -190]));
+console.log(sortArray([1, 2, -5, 6, -3, -2, 9]));
