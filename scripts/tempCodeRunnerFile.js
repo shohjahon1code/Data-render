@@ -1,18 +1,11 @@
-function sortArray(array) {
-  const positive = [];
-  const negative = [];
-
-  array.forEach((arr) => {
-    if (arr < 0) {
-      negative.push(arr);
-    } else {
-      positive.push(arr);
+function identifyNegativeNums(array) {
+  let arr = [];
+  array.forEach((item) => {
+    if (item < 0) {
+      arr.push(item);
     }
   });
-  const reducedPos = positive.reduce((acc, cur) => acc + cur);
-  const reducedNeg = negative.reduce((acc, cur) => acc + cur);
-
-  return [reducedPos,reducedNeg]
+  return arr;
 }
 
-console.log(sortArray([1, 2, -5, 6, -3, -2, 9]));
+console.log(identifyNegativeNums([1, 3, -4, 6, -8, -9, -190]));

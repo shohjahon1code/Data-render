@@ -24,7 +24,7 @@ function palendromNum(num) {
   return num.toString().split("").reverse().join("") == num ? true : false;
 }
 
-console.log(palendromNum(242));
+console.log(palendromNum(279));
 
 // 3-masala
 function findYear(num) {
@@ -35,7 +35,7 @@ function findYear(num) {
   }
 }
 
-findYear(1200);
+findYear(1300);
 
 // 4-masala
 function identifyNegativeNums(array) {
